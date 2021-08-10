@@ -27,3 +27,11 @@ You are a Data analyst working at a health research company in Haiti.  The gover
   <li> What is the variation in prevalence per week? </li>
   <li> Build a Power BI dashboard to understand the health structures in Haiti. </li>
 </ol>
+
+## Provide
+
+<ul>
+  <li> The SQL Query File (sql_query_first_name_lastname.sql) </li>
+  <li> The backup of the relational database (database_name_database_provider_firstname_last_name) </li>
+  <li> The PBIX  file of the dahsboard (covid_and_health_dashboard) </li>
+ </ul>
