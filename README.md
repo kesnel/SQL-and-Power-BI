@@ -6,7 +6,6 @@ You are a Data analyst working at a health research company in Haiti.  The gover
   <li> Relational Database to manage all the data collection </li>
   <li> Use SQL Language to answers some query provided from the Board </li>
   <li> Build a dashboard with Power BI to illustrate all the activities of covid </li>
-  <li> </li>
 </ol>
 
 ## Questions
