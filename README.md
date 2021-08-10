@@ -8,7 +8,7 @@ You are a Data analyst working at a health research company in Haiti.  The gover
   <li> Build a dashboard with Power BI to illustrate all the activities of covid </li>
 </ol>
 
-## Questions
+### Questions
 
 <ol>
   <li> Create a relational database with this raw data set. </li>
@@ -28,7 +28,7 @@ You are a Data analyst working at a health research company in Haiti.  The gover
   <li> Build a Power BI dashboard to understand the health structures in Haiti. </li>
 </ol>
 
-## Provide
+### Provide
 
 <ul>
   <li> The SQL Query File (sql_query_first_name_lastname.sql) </li>
