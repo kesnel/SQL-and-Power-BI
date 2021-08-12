@@ -19,7 +19,7 @@ You are a Data analyst working at a health research company in Haiti.  The gover
   <li> Calculate the number of sites with an ambulance by municipality and by department (ambulance = 1.0). </li>
   <li> Calculate the number of hospitals per 10k inhabitants per department. </li>
   <li> Calculate the number of sites per 10k inhabitants per department * Question 9. </li>
-  <li> Calculate the number of beb per 1k inhabitants per department. </li>
+  <li> Calculate the number of bed per 1k inhabitants per department. </li>
   <li> How many communes have fewer dispensaries than hospitals? </li>
   <li> How many deaths per month? </li>
   <li> How many prevalences per month? </li>
