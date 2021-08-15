@@ -3,8 +3,10 @@ SELECT
 	COUNT(facdesc) as "# health facilities", 
 	vilcomn as "Commune"
 FROM spa
-	GROUP BY vilcomn
-	ORDER BY vilcomn;
+	GROUP BY 
+		vilcomn
+	ORDER BY 
+		vilcomn;
 
 -- 2. Calculate the number of health facilities by commune and by type of health facility.
 SELECT 
@@ -12,8 +14,11 @@ SELECT
 	vilcomn as "Commune",
 	facdesc_1 as "Type"
 FROM spa
-	GROUP BY vilcomn, facdesc_1
-	ORDER BY facdesc_1;
+	GROUP BY 
+		vilcomn, 
+		facdesc_1
+	ORDER BY 
+		facdesc_1;
 
 -- 3. Calculate the number of health facilities by municipality and by department.
 SELECT 
@@ -21,8 +26,11 @@ SELECT
 	vilcomn, 
 	departn
 FROM spa
-	GROUP BY vilcomn, departn
-	ORDER BY departn;
+	GROUP BY 
+		vilcomn, 
+		departn
+	ORDER BY 
+		departn;
 
 -- 4. Calculate the number of sites by type (mga) and by department.
 SELECT 
@@ -30,8 +38,11 @@ SELECT
 	departn as "Department",
 	mga as "Type (MGA)"
 FROM spa
-	GROUP BY mga, departn
-	ORDER BY mga;
+	GROUP BY 
+		mga, 
+		departn
+	ORDER BY 
+		mga;
 	
 -- 5. Calculate the number of sites with an ambulance by municipality and by department (ambulance = 1.0).
 SELECT 
@@ -53,8 +64,23 @@ FROM spa
 
 
 -- 9. How many communes have fewer dispensaries than hospitals?
-
-
+SELECT 
+	COUNT(facdesc_1) FILTER(WHERE facdesc_1 IN ('DISPENSAIRE')) AS qty_dispensaries,
+	COUNT(facdesc_1) FILTER(WHERE facdesc_1 IN ('HOPITAL')) AS qty_hospitals,
+	vilcomn as "Commune",
+	facdesc_1
+FROM spa
+	GROUP BY 
+		vilcomn,
+		facdesc_1
+	HAVING
+		(facdesc_1 IN ('DISPENSAIRE')) < (facdesc_1 IN ('HOPITAL'))
+	ORDER BY
+		qty_dispensaries
+/*
+	CONCLUSION: There are 59 municipalities with fewer dispensaries than hospitals
+*/
+		
 -- 10. How many deaths per month?
 SELECT 
 	EXTRACT(YEAR FROM to_date(document_date,'YYYY-MM-DD')) AS Year,
